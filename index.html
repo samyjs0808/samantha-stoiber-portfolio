@@ -55,11 +55,11 @@
         </div>
         <div class="stat">
           <div class="stat-num">2</div>
-          <div class="stat-label">Research positions</div>
+          <div class="stat-label">Internships</div>
         </div>
         <div class="stat">
           <div class="stat-num">2</div>
-          <div class="stat-label">Internships</div>
+          <div class="stat-label">Research positions</div>
         </div>
       </div>
     </div>
@@ -68,22 +68,33 @@
   <!-- Experience -->
   <section class="section" id="experience">
     <p class="section-label">Experience</p>
-    <div class="exp-list">
-      <div class="exp-item">
-        <div class="exp-time">2026 — Present</div>
-        <div class="exp-body">
-          <div class="exp-company">Hover Inc, Aero</div>
-          <div class="exp-role">ECE Intern</div>
-          <p class="exp-desc">Currently interning for the summer of 2026. Stay tuned for more updates!</p>
+
+    <div class="exp-carousel" tabindex="0" aria-roledescription="carousel" aria-label="Work and research experience, use left and right arrow keys to navigate">
+      <div class="exp-viewport">
+        <div class="exp-track">
+          <article class="exp-card" tabindex="0">
+            <div class="exp-time">2026 — Present</div>
+            <div class="exp-company">Hover Inc, Aero</div>
+            <div class="exp-role">Software Engineering Intern</div>
+            <p class="exp-desc">Currently interning for the summer of 2026. Stay tuned for more updates!</p>
+          </article>
+          <article class="exp-card" tabindex="0">
+            <div class="exp-time">Jan 2026 — Present</div>
+            <div class="exp-company">Silicon Systems Research Lab, UW</div>
+            <div class="exp-role">Undergraduate Research Assistant</div>
+            <p class="exp-desc">Building a LLE simulator with Python to model microresonator behavior for photonics biosensing. Partnered with Primary Bioscience for protein analysis on 12 peptides using Raman Spectroscopy on InVia microscope.</p>
+          </article>
         </div>
       </div>
-      <div class="exp-item">
-        <div class="exp-time">Jan 2026 — Present</div>
-        <div class="exp-body">
-          <div class="exp-company">Silicon Systems Research Lab, UW</div>
-          <div class="exp-role">Undergraduate Research Assistant</div>
-          <p class="exp-desc">Building a LLE simulator with Python to model microresonator behavior for photonics biosensing. Partnered with Primary Bioscience for protein analysis on 12 peptides using Raman Spectroscopy on InVia microscope.</p>
-        </div>
+
+      <div class="exp-nav">
+        <button class="exp-arrow exp-arrow-prev" aria-label="Previous experience">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="exp-dots"></div>
+        <button class="exp-arrow exp-arrow-next" aria-label="Next experience">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
       </div>
     </div>
   </section>
