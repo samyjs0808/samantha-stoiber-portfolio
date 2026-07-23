@@ -1,11 +1,10 @@
-// Logo click scrolls back to the top of the page
-const logoLink = document.getElementById('logo-home');
-if (logoLink) {
-  logoLink.addEventListener('click', (e) => {
+// Logo / footer name click scrolls back to the top of the page
+document.querySelectorAll('.scroll-top').forEach(el => {
+  el.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-}
+});
 
 // Mobile nav toggle
 const toggle = document.querySelector('.nav-toggle');

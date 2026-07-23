@@ -226,9 +226,11 @@ a {
 }
 
 .about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  gap: 1.2rem 2rem;
 }
 
 .stat {
@@ -565,6 +567,7 @@ a {
 .awards-strip {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -728,6 +731,7 @@ a {
   .section { padding: 2.5rem 1.5rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-stats { grid-template-columns: 1fr; grid-auto-flow: row; }
   .awards-strip { flex-direction: column; }
   .award-chip { min-width: 0; text-align: left; }
   .exp-card { padding: 1.6rem 1.4rem; }
