@@ -140,6 +140,13 @@ a {
   margin-bottom: 1.2rem;
 }
 
+.hero-gpa {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2rem;
+}
+
 .hero-desc {
   font-size: 14px;
   color: var(--text-secondary);
@@ -244,52 +251,11 @@ a {
 }
 
 /* =====================
-   Education
-   ===================== */
-.edu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.edu-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.edu-school {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.edu-degree {
-  font-family: var(--font-italic);
-  font-style: italic;
-  font-size: 14px;
-  letter-spacing: var(--letter-spacing-wide);
-  color: var(--blue);
-}
-
-.edu-date {
-  font-size: 12px;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
-  margin-top: 4px;
-}
-
-.edu-stats {
-  display: flex;
-  gap: 2.4rem;
-}
-
-/* =====================
    Experience — Flashcard Carousel
    ===================== */
 .exp-carousel {
-  max-width: 620px;
+  max-width: 900px;
+  margin: 0 auto;
   outline: none;
 }
 
@@ -589,6 +555,48 @@ a {
   margin-top: 6px;
 }
 
+.timeline-item + .timeline-item {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 0.5px solid var(--border);
+}
+
+/* Awards & Honors — horizontal chip strip, distinct from the badge grids used elsewhere */
+.awards-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.award-chip {
+  background: var(--surface);
+  border: 0.5px solid var(--border-light);
+  border-top: 2px solid var(--blue);
+  padding: 14px 20px;
+  text-align: center;
+  min-width: 150px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.award-chip:hover {
+  background: var(--card-grey);
+  border-color: var(--blue);
+  transform: translateY(-2px);
+}
+
+.award-title {
+  font-size: 13px;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.award-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  letter-spacing: 0.05em;
+}
+
 /* Badges — used for awards, organization memberships, and coursework */
 .badge-grid {
   display: grid;
@@ -693,6 +701,7 @@ a {
 .hero-tag   { animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
 .hero-title { animation: fadeUp 0.5s ease both; animation-delay: 0.2s; }
 .hero-sub   { animation: fadeUp 0.5s ease both; animation-delay: 0.3s; }
+.hero-gpa   { animation: fadeUp 0.5s ease both; animation-delay: 0.35s; }
 .hero-desc  { animation: fadeUp 0.5s ease both; animation-delay: 0.4s; }
 .hero-btns  { animation: fadeUp 0.5s ease both; animation-delay: 0.5s; }
 
@@ -719,7 +728,8 @@ a {
   .section { padding: 2.5rem 1.5rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .edu-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .awards-strip { flex-direction: column; }
+  .award-chip { min-width: 0; text-align: left; }
   .exp-card { padding: 1.6rem 1.4rem; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
   .badge-grid { grid-template-columns: 1fr; }

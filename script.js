@@ -1,3 +1,12 @@
+// Logo click scrolls back to the top of the page
+const logoLink = document.getElementById('logo-home');
+if (logoLink) {
+  logoLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Mobile nav toggle
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
