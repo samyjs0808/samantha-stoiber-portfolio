@@ -244,6 +244,48 @@ a {
 }
 
 /* =====================
+   Education
+   ===================== */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edu-school {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.edu-degree {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--blue);
+}
+
+.edu-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.edu-stats {
+  display: flex;
+  gap: 2.4rem;
+}
+
+/* =====================
    Experience — Flashcard Carousel
    ===================== */
 .exp-carousel {
@@ -472,6 +514,105 @@ a {
 }
 
 /* =====================
+   Leadership, Organizations & Awards
+   ===================== */
+.sub-block {
+  margin-bottom: 2.4rem;
+}
+
+.sub-block:last-child {
+  margin-bottom: 0;
+}
+
+.sub-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+}
+
+.timeline-time {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 0.05em;
+  padding-top: 4px;
+  line-height: 1.5;
+}
+
+.timeline-org {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.timeline-role {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.timeline-list {
+  list-style: none;
+}
+
+.timeline-list li {
+  position: relative;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.75;
+  padding-left: 16px;
+}
+
+.timeline-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.timeline-list li + li {
+  margin-top: 6px;
+}
+
+/* Badges — used for awards, organization memberships, and coursework */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.badge {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-left: 2px solid var(--blue);
+  padding: 11px 16px;
+  font-size: 13px;
+  color: #aaa;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.badge:hover {
+  border-color: var(--blue);
+  background: var(--card-grey);
+  color: var(--text-primary);
+}
+
+/* =====================
    Contact
    ===================== */
 .contact-grid {
@@ -578,7 +719,10 @@ a {
   .section { padding: 2.5rem 1.5rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .edu-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   .exp-card { padding: 1.6rem 1.4rem; }
+  .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .badge-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
